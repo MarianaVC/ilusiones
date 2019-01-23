@@ -1,0 +1,11 @@
+ilusiones/src/almacenes/migrations/*
+ilusiones/src/ordenes/migrations/*
+ilusiones/src/productos/migrations/*
+ilusiones/src/ilusiones/__pycache__
+ilusiones/.DS_Store
+ilusiones/config/.DS_Store
+ilusiones/src/.DS_Store
+ilusiones/src/almacenes/__pycache__/
+ilusiones/src/ordenes/__pycache__/
+ilusiones/src/productos/.DS_Store
+ilusiones/src/static/ajax_select/.DS_Store
