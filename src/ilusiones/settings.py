@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'orders.apps.OrdersConfig',
+    'products.apps.ProductsConfig',
+    'warehouses.apps.WarehousesConfig',
     'imagekit',
     'ajax_select'    
 ]
