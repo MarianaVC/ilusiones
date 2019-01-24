@@ -24,7 +24,10 @@ class PurchaseOrder(models.Model):
 	product = models.ForeignKey(Product, related_name = 'order_product')	
 	quantity = models.PositiveIntegerField(default = 0, blank = False, null = False)
 	warehouse = models.ForeignKey(Warehouse, related_name = 'order_warehouse')
-	
+	ready = models.BooleanField(default = True)
+	created_at = models.DateTimeField('Created at',auto_now_add = True)
+	updated_at = models.DateTimeField('Updated at',auto_now = True,blank = True, null = True) 
+
 	class Meta:
 		verbose_name = 'Orden de compra'
 		verbose_name_plural = 'Órdenes de compra'
