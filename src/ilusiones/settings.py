@@ -25,7 +25,7 @@ SECRET_KEY = '7njj6g32n!&zbgx$(x7k#6az+=nobch2qf!2-4+j_n8k0w+hpa'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['web']
 STATIC_ROOT='/static'
 
 # Application definition
@@ -39,9 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'orders.apps.OrdersConfig',
     'products.apps.ProductsConfig',
     'warehouses.apps.WarehousesConfig',
+    'api.apps.ApiConfig',
     'imagekit',
     'ajax_select'    
 ]
@@ -59,10 +61,14 @@ MIDDLEWARE_CLASSES = [
 
 ROOT_URLCONF = 'ilusiones.urls'
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASES':[]
+}
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
